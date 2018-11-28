@@ -8,6 +8,18 @@ GoogleDrive.prototype.uploadFile = function (fpath,appfolder,successCallback, er
     cordova.exec(successCallback, errorCallback, "GoogleDrive", "uploadFile", [fpath,appfolder]);
 };
 
+GoogleDrive.prototype.uploadFileUnderParent = function(fpath,parentId,successCallback,errorCallback){
+    cordova.exec(successCallback,errorCallback,"GoogleDrive","uploadFileUnderParent",[fpath,parentId]);
+};
+
+GoogleDrive.prototype.addFolder = function (name,resourceId,successCallback, errorCallback) {
+    cordova.exec(successCallback, errorCallback, "GoogleDrive", "addFolder", [name,resourceId]);
+};
+
+GoogleDrive.prototype.listFolder = function (appfolder,resourceId,successCallback, errorCallback) {
+    cordova.exec(successCallback, errorCallback, "GoogleDrive", "listFolder", [appfolder,resourceId]);
+};
+
 GoogleDrive.prototype.fileList = function (appfolder,successCallback, errorCallback) {
     cordova.exec(successCallback, errorCallback, "GoogleDrive", "fileList", [appfolder]);
 };
