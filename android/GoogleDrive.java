@@ -488,7 +488,7 @@ public class GoogleDrive extends CordovaPlugin implements GoogleApiClient.Connec
 
     private void listFolder(final boolean appFolder, final String resourceId) {
       Query.Builder qb = new Query.Builder();
-      if (null != resourceId) {
+      if (null != resourceId && !resourceId.isEmpty()) {
           // please see https://developers.google.com/android/reference/com/google/android/gms/drive/metadata/SearchableCollectionMetadataField
           // for pairing filters with parent resources
 
